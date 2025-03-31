@@ -1,8 +1,8 @@
 {
-    "name": "BELTAH-MD Pairing",
-    "description": "BELTAH-MD WA bot, Created by Beltah KE",
-    "logo": "https://telegra.ph/file/dcce2ddee6cc7597c859a.jpg",
-    "repository": "https://github.com/Beltahmd/Beltah-Sessions",
+    "name": "BLACKMACHANT MD PAIRING",
+    "description": "BELTAH-MD WA bot, Created by blackmachant KE",
+    "logo": "https://i.imgur.com/aGmtrh0.jpeg ",
+    "repository": "https://github.com/Blackmachant/Blackmachant-Sessions",
     "keywords": ["LegacyMd"],
     "success_url": "/", 
     "buildpacks": [{ "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" } ],
