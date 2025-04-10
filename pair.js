@@ -95,7 +95,7 @@ router.get('/', async (req, res) => {
                             externalAdReply: {
                                 title: 'Thanks for choosing blackmachant happy deployment 💜',
                                 body: 'Regards  blackmachant',
-                                thumbnailUrl: 'https://i.imgur.com/nl2TjFB.jpeg',
+                                thumbnailUrl: 'https://i.imgur.com/RJijoTT.jpeg',
                                 sourceUrl: 'https://whatsapp.com/channel/0029Vaan9TF9Bb62l8wpoD47',
                                 mediaType: 1,
                                 renderLargerThumbnail: true,
