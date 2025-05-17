@@ -11,10 +11,11 @@
   "author": "keith Tech",
   "license": "GPL-3.0 license",
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.5.0",
+    "@whiskeysockets/baileys": "^6.6.0",
     "maher-zubair-baileys": "^6.6.5",
-    "baileys-elite": "^0.0.4",
+    "baileys-elite": "latest",
     "qrcode": "^1.5.3",
+    "jimp": "^0.16.13",
     "awesome-phonenumber": "^2.64.0",
     "pino": "^8.1.0",
     "phone" : "3.1.30",
