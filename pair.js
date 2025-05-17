@@ -9,7 +9,7 @@ const {
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
-} = require('baileys-elite');
+} = require("baileys-elite");
 
 const router = express.Router();
 
