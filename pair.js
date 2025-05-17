@@ -5,7 +5,7 @@ const express = require('express');
 const fs = require('fs');
 const pino = require('pino');
 const {
-    default: Brasho_Kish,
+    default: makeWASocket,
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
@@ -52,15 +52,14 @@ router.get('/', async (req, res) => {
     async function LEGACY_MD_PAIR_CODE() {
         const { state, saveCreds } = await useMultiFileAuthState('./temp/' + id);
         try {
-            const Pair_Code_By_Brasho_Kish = Brasho_Kish({
-                auth: {
-                    creds: state.creds,
-                    keys: makeCacheableSignalKeyStore(state.keys, pino({ level: 'fatal' }).child({ level: 'fatal' })),
-                },
-                printQRInTerminal: false,
-                logger: pino({ level: 'fatal' }).child({ level: 'fatal' }),
-                browser: ['Chrome (Linux)', '', '']
-            });
+      const client = makeWASocket({
+        printQRInTerminal: false,
+        logger: pino({
+          level: 'silent',
+        }),
+        browser: ['Ubuntu', 'Chrome', '20.0.04'],
+        auth: state,
+      })
 
             if (!Pair_Code_By_Brasho_Kish.authState.creds.registered) {
                 await delay(1500);
