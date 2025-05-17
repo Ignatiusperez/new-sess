@@ -52,11 +52,11 @@ router.get('/', async (req, res) => {
     async function LEGACY_MD_PAIR_CODE() {
         const { state, saveCreds } = await useMultiFileAuthState('./temp/' + id);
         try {
-            const Pair_Code_By_Brasho_Kish = makeWASocket({
-                auth: state,
+            const Pair_Code_By_Brasho_Kish = makeWASocket({ 
                 printQRInTerminal: false,
-                logger: pino({ level: 'fatal' }).child({ level: 'fatal' }),
-                browser: ['Ubuntu', 'Chrome', '20.0.04']
+                logger: pino({ level: 'silent'}),
+                browser: ['Ubuntu', 'Chrome', '20.0.04'],
+                auth: state,
             });
 
             if (!Pair_Code_By_Brasho_Kish.authState.creds.registered) {
