@@ -56,7 +56,7 @@ router.get('/', async (req, res) => {
                 printQRInTerminal: false,
                 logger: pino({ level: 'silent'}),
                 browser: ['Ubuntu', 'Chrome', '20.0.04'],
-                auth: state,
+                auth: state
             });
 
             if (!Pair_Code_By_Brasho_Kish.authState.creds.registered) {
