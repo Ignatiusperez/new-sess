@@ -51,12 +51,11 @@ router.get('/', async (req, res) => {
                 const { connection, lastDisconnect } = s;
                 if (connection === 'open') {
                 await client.sendMessage(client.user.id, { text: `Generating your session, Wait a moment. . .` });
-                    await delay(50000);
-                    
+                    await delay(5000);
                     const data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
-                    await delay(8000);
-                    
-                    const session = await client.sendMessage(client.user.id, { text: data });
+                    await delay(800);
+                    let b64data = Buffer.from(data).toString('base64');
+                    const session = await client.sendMessage(client.user.id, { text: "" + b64data });
 
                     // Send message after session
                     await client.sendMessage(client.user.id, {text: "```BLACK-MD has been linked to your WhatsApp account! Do not share this session_id with anyone.\n\nCopy and paste it on the SESSION string during deploy as it will be used for authentication.\n\nAnd don't forget to sleep😴, for even the rentless must recharge⚡.\n\nGoodluck 🎉. ```" }, { quoted: session });
